@@ -25,7 +25,7 @@ module.exports.pitch = function(remainingRequest) {
   }
 
   config = require(configFilePath);
-  styleLoader = config.styleLoader || 'style-loader!css-loader!sass-loader';
+  styleLoader = config.styleLoader || 'style-loader!raw!sass-loader';
   logger.verbose(config, 'styleLoader: %s', styleLoader);
 
   styleLoaderCommand = 'require(' + JSON.stringify('-!' + styleLoader + '!' +
